@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: user-database
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+    ports:
+      - "5001:5432"
+    restart: unless-stopped
